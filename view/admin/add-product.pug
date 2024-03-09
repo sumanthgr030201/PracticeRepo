@@ -1,0 +1,16 @@
+extends ../layout/navBar.pug
+
+block content            
+    form(action='/admin' method='post' )
+        fieldset.add-product-container 
+            legend Add item
+                
+            label(for='product-name') Product Name
+            input#product-name(type='text' name='productName' required)
+            label(for='product-image') Image Url
+            input#product-image(type='text' name='productImage' required)
+            label(for='product-price') Price
+            input#product-price(type='number' name='productPrice' required)
+            label(for='product-description')  Description
+            textarea#product-description(row='60'  name='productDescription' maxlength='150' required)
+            input#submit-button(type='submit')

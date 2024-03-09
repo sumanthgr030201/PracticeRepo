@@ -1,0 +1,17 @@
+extends ../layout/navBar.pug
+
+block content  
+    .container
+        if(products.length>0)
+            each product in products 
+                .card 
+                    h1 #{product.productName} 
+                    img(src=product.productImage, height='100px', width='200px', alt=product.productName)
+                    p #{product.productPrice} 
+                    p #{product.productDescription}
+                    form(action='/shop/add-to-cart',method='post')
+                        input(type='hidden' value=product.id name='productId')
+                        console.log(product.id)
+                        button(type='submit') Add To Cart
+        else 
+            h1 No Products To Display                

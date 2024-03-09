@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet" href='/admin/admin.css')
+        link(rel="stylesheet" href='/shop/shop.css')
+    body 
+        ul.menu-bar 
+
+            li 
+                a(href='/shop/home') Home 
+            li 
+                a(href='/') products 
+            li 
+                a(href='/') Cart 
+            li 
+                a(href='/admin/add-product') Sell 
+            li 
+                a(href='/') Admin Products
+        block content             

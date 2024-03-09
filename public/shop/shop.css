@@ -1,0 +1,31 @@
+.card{
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    height:auto;
+    background-color:antiquewhite;
+    margin: 10px;
+    border-radius: 3vh;
+
+}
+.card img{
+    width:auto;
+    height:200px;
+    overflow: hidden;
+}
+.container{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card button{
+    padding:5px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color:white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}

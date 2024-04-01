@@ -19,13 +19,64 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 3em;
 }
-.card button{
-    padding:5px;
-    background-color: blueviolet;
+.detailsContainer{
+    text-align: center;
+    
+}
+
+.flexbox{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flexbox a{
+    text-decoration: none;
+    color:black;
+    padding:0.5em;
+    background-color:rgb(196, 173, 217); 
     border-radius: 5px;
-    color:white;
     margin-top: 10px;
     margin-bottom: 20px;
     cursor:pointer;
+    border: 1px solid black;
+}
+.card button{
+    padding:0.5em;
+    background-color: rgb(196, 173, 217);;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+.paymentContainer{
+    display: flex;
+    position:fixed;
+    top:3em;
+    width:100%;
+    align-items:center;
+    background-color: rgb(196, 173, 217);
+}
+.paymentContainer h3{
+    margin-left: 10%;
+}
+.paymentContainer span{
+    float: right;
+    margin-left: 50%;
+    font-weight: bold;
+    flex-basis: 10%;
+}
+.paymentContainer button{
+    float: right;
+    margin-left: 5%;
+    padding: 1vw;
+    width:10vw;
+    background-color: rgb(164, 75, 200);
+    font-weight: bold;
+    border: none;
+    
+}
+.paymentContainer + .container{
+    padding-top: 6em;
 }

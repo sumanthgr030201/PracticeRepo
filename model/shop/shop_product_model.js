@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs')
-const p = path.join(path.dirname(process.mainModule.filename), 'data', 'cart')
+const p = path.join(path.dirname(process.mainModule.filename), 'data', 'cart.json')
 
 exports.getItemsFromCart = (cb)=>{
     fs.readFile(p, (error, fileContent)=>{
@@ -10,7 +10,8 @@ exports.getItemsFromCart = (cb)=>{
         else{
             const cart = JSON.parse(fileContent);
             const products = cart.products || []
-            cb(products)
+            const totalPrice = cart.totalPrice;
+            cb(products, totalPrice)
         }
     })
 }

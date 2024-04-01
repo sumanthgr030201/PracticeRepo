@@ -1,7 +1,12 @@
 const path = require('path');
 const ProductDetails = require('../../model/admin/admin_product_model');
+const { query } = require('express');
 
-
+exports.getProducts = (req,res,next)=>{
+    ProductDetails.fetchAll((products)=>{
+        res.render(path.join('admin','admin-products'),{products:products,pageTitle:'Admin-products'})
+    })
+}
 exports.addProductPage = (req,res,next)=>{
     res.render(path.join('admin','add-product'),{'pageTitle':'Add-product'})
 };
@@ -17,3 +22,13 @@ exports.addProduct = (req,res,next)=>{
     next()
 
 };
+exports.editProduct=(req,res,next)=>{
+    const id = req.query.id;
+    const isEditing = req.query.isEditing;
+    console.log(isEditing)
+    ProductDetails.fetchAll((products)=>{
+        const editingProduct = products.find(product=>product.id === id)
+        console.log(editingProduct);
+        res.render(path.join('admin','add-product'), {editingProduct,isEditing})
+    })
+}

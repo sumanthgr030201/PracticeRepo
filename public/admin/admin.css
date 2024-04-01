@@ -4,6 +4,7 @@ body{
 .menu-bar{
     list-style-type:none;
     display:flex;
+    position: fixed;
     background-color:blueviolet;
     color:white;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -23,6 +24,15 @@ body{
 .menu-bar li a{
     text-decoration: none;
     color:white;
+}
+.container-admin{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+}
+.container-admin .card-admin{
+    width:900px;
 }
 .add-product-container{
     text-align: center;
@@ -59,4 +69,11 @@ body{
 }
 #product-name{
     color:rgb(184, 49, 173);
+}
+.card-admin img{
+    float:left;
+    margin: 1em;
+}
+._404{
+    padding-top: 3em;
 }
